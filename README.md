@@ -86,10 +86,8 @@ device = cuda/cpu                   ## No need to change
 ```
 ```
 
-model_name = "ViT"             ## For this project ResNet18/ResNet34/ResNet50 models were trained
-                                    ## There is no difference in inference, but ResNet18 is faster
-                                    ## It gives 12++ fps on CPU
-                                    ## Any model available in torchvision.models can be trained by changing this parameter.
+model_name = "ViT"                  ## Careful! its ** ViT **
+                                    
 ```
 ```
 

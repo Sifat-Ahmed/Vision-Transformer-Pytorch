@@ -15,7 +15,13 @@ class ViT(nn.Sequential):
                  **kwargs):
 
         super().__init__(
-            PatchEmbeddings(in_channels=in_channels, patch_size=patch_size, embedding_size=embedding_size, image_size=image_size),
-            MultiHeadAttention(embedding_size, depth, **kwargs),
-            ClassificationBlock(embedding_size, n_classes)
+            PatchEmbeddings(in_channels=in_channels,
+                            patch_size=patch_size,
+                            embedding_size=embedding_size,
+                            image_size=image_size),
+            MultiHeadAttention(embedding_size=embedding_size,
+                               num_heads=depth,
+                               dropout= 0.1,
+                               ),
+            ClassificationBlock(embedding_size=embedding_size, n_classes=n_classes)
         )

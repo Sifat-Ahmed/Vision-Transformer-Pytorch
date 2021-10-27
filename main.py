@@ -99,7 +99,12 @@ def main():
         val_dataset, batch_size=cfg.batch_size, shuffle=True, num_workers=cfg.num_workers, pin_memory=cfg.pin_memory,
     )
 
-    model = ViT(n_classes=cfg.num_classes)
+    model = ViT(in_channels=cfg.in_channels,
+                image_size=cfg.image_size[0],
+                embedding_size=cfg.embedding_size,
+                patch_size=cfg.patch_size,
+                depth=cfg.depth,
+                n_classes=cfg.num_classes)
         #getattr(models, cfg.model_name)(
         #pretrained=False, num_classes=cfg.num_classes, )
 
