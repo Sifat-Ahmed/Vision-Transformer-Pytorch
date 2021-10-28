@@ -148,7 +148,7 @@ python3 main.py
 ```
 given that you are already in the project folder.
 
-[Training and Validation Accuracy](images/accuracy.png "Accuracy Curve") 
+![Training and Validation Accuracy](images/accuracy.png "Accuracy Curve") 
 
 <center> Fig: Training and Validation Accuracy Curve </center>
 
