@@ -10,7 +10,7 @@ class Config:
 
         self.num_classes = 1
         self.epochs = 30
-        self.batch_size = 256
+        self.batch_size = 128
         self.dataset_dir = r'/home/workstaion/workspace/potatochips/smoke detection/smoke_data/dataset'
 
         self.resize = True
@@ -23,7 +23,13 @@ class Config:
         
         self.model_name = 'ViT'
         self.model_path = r'saved/'+ self.model_name +'_'+str(self.image_size[0])+'x'+str(self.image_size[1])+'.pth'
-        
+        self.in_channels = 3
+        self.patch_size = 16
+        self.embedding_size = 24
+        self.depth = 4
+
+
+
         self.learning_rate = 0.001
 
         self.classification_threshold = 0.75
